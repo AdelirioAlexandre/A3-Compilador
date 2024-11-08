@@ -1,0 +1,23 @@
+<programa> ::= <declaracoes> <comandos>
+# Um programa consiste em uma sequência de declarações e comandos.
+
+<declaracoes> ::= <declaracao> | <declaracao> <declaracoes>
+# Uma ou mais declarações de variáveis.
+
+<declaracao> ::= "int" <identificador> ";"
+# Declaração de uma variável inteira.
+
+<comandos> ::= <comando> | <comando> <comandos>
+# Um ou mais comandos.
+
+<comando> ::= <atribuicao> | <impressao> | <if> | <while> | <do_while> | <for>
+# Um comando pode ser uma atribuição, impressão, estrutura condicional ou de repetição.
+
+<atribuicao> ::= <identificador> "=" <expressao> ";"
+# Atribuição de uma expressão a uma variável.
+
+<impressao> ::= "print" "(" <expressao> ")" ";"
+# Comando para imprimir uma expressão.
+
+<if> ::= "if" "(" <expressao> ")" "{" <comandos> "}" <else>
+# Estrutura condicional "if", opcionalmente seguida por um "else".
